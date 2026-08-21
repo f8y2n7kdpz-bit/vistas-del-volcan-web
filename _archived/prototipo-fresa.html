@@ -1,0 +1,66 @@
+<!--
+ARCHIVO: contenido del prototipo "Fresa" retirado del sitio el 2026-08-20.
+Motivo: prototipo temporalmente no disponible (a solicitud del cliente).
+Para reactivarlo, reinsertar cada bloque en index.html en su ubicación original:
+  1) El botón de pestaña, dentro de <div class="model-tabs reveal"> (después del botón "Cima").
+  2) El <article> completo, dentro de la sección de Modelos (después del </article> de Cima).
+  3) La <option>Fresa</option>, dentro del <select id="modelo"> (después de la opción "Cima").
+  4) El <li> del footer, dentro de <div><h4>Modelos</h4><ul>...</ul></div> (después del <li> de Cima).
+Las imágenes (fresa-1.jpg, fresa-2.jpg, fresa-3.jpg, fresa-aerial-1.jpg, fresa-aerial-2.jpg, fresa-aerial-3.jpg)
+se conservaron en images/ y no fueron borradas.
+-->
+
+<!-- 1) BOTÓN DE PESTAÑA (dentro de .model-tabs) -->
+<button class="model-tab" data-target="#modelo-fresa">Fresa</button>
+
+<!-- 2) ARTICLE COMPLETO -->
+<!-- FRESA -->
+<article id="modelo-fresa" class="model-block reveal">
+  <div class="model-gallery">
+    <div class="model-gallery-main" data-gallery="fresa" data-full="images/fresa-1.jpg">
+      <img src="images/fresa-1.jpg" alt="Fachada del modelo Fresa en Vistas del Volcán">
+    </div>
+    <div class="model-thumbs">
+      <button class="active" data-full="images/fresa-1.jpg"><img src="images/fresa-1.jpg" alt="Fachada Fresa 1"></button>
+      <button data-full="images/fresa-2.jpg"><img src="images/fresa-2.jpg" alt="Fachada Fresa 2"></button>
+      <button data-full="images/fresa-3.jpg"><img src="images/fresa-3.jpg" alt="Fachada Fresa 3"></button>
+      <button data-full="images/fresa-aerial-3.jpg"><img src="images/fresa-aerial-3.jpg" alt="Vista aérea de Fresa con el Volcán de Colima al fondo"></button>
+      <button data-full="images/fresa-aerial-2.jpg"><img src="images/fresa-aerial-2.jpg" alt="Vista aérea de las casas modelo Fresa"></button>
+      <button data-full="images/fresa-aerial-1.jpg"><img src="images/fresa-aerial-1.jpg" alt="Vista aérea del modelo Fresa"></button>
+    </div>
+    <div style="display:none">
+      <a data-gallery="fresa" data-full="images/fresa-2.jpg"><img src="images/fresa-2.jpg" alt="Fachada Fresa 2"></a>
+      <a data-gallery="fresa" data-full="images/fresa-3.jpg"><img src="images/fresa-3.jpg" alt="Fachada Fresa 3"></a>
+      <a data-gallery="fresa" data-full="images/fresa-aerial-3.jpg"><img src="images/fresa-aerial-3.jpg" alt="Vista aérea de Fresa con el Volcán de Colima al fondo"></a>
+      <a data-gallery="fresa" data-full="images/fresa-aerial-2.jpg"><img src="images/fresa-aerial-2.jpg" alt="Vista aérea de las casas modelo Fresa"></a>
+      <a data-gallery="fresa" data-full="images/fresa-aerial-1.jpg"><img src="images/fresa-aerial-1.jpg" alt="Vista aérea del modelo Fresa"></a>
+    </div>
+  </div>
+  <div class="model-info">
+    <span class="model-type">Departamento · planta baja</span>
+    <h3>Fresa</h3>
+    <div class="model-specs">
+      <span class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18h18"/><path d="M5 10V7a2 2 0 0 1 2-2h3v5"/><circle cx="7" cy="14" r="1"/></svg>2 recámaras</span>
+      <span class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3"/><path d="M4 19v2M18 19v2"/></svg>2 baños completos</span>
+      <span class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>51 m² construcción</span>
+    </div>
+    <ul class="model-features">
+      <li>Área privada de jardín en la parte posterior</li>
+      <li>Cocina integral equipada</li>
+      <li>Closets y muebles de baño</li>
+    </ul>
+    <div class="price-box">
+      <span class="from">Precio</span>
+      <div class="amount">$850,000 MXN</div>
+    </div>
+    <div class="model-cta">
+      <a class="btn btn-primary" href="https://wa.me/523320274445?text=Hola%2C%20me%20interesa%20el%20modelo%20Fresa%20de%20Vistas%20del%20Volc%C3%A1n" target="_blank" rel="noopener">Preguntar por Fresa</a>
+    </div>
+  </div>
+</article>
+
+<!-- 3) OPTION DEL SELECT "Modelo de interés" -->
+<option>Fresa</option>
+
+<!-- 4) LINK DEL FOOTER (dentro de <ul> de "Modelos") -->
+<li><a href="#modelo-fresa">Fresa</a></li>
