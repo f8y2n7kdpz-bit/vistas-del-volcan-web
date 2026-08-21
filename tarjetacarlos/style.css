@@ -1,0 +1,289 @@
+/* Vistas del Volcán — Tarjeta de presentación digital (NFC) */
+
+:root {
+  --green-900: #163a26;
+  --green-800: #1f5c3a;
+  --green-700: #276b45;
+  --gold-500: #f5a623;
+  --gold-600: #dd8f15;
+  --cream-50: #faf7f0;
+  --cream-100: #f3efe4;
+  --ink-900: #1c2420;
+  --ink-700: #3c463f;
+  --ink-500: #6b756e;
+  --line: #e4ded0;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 10px rgba(28, 36, 32, 0.10);
+  --shadow-md: 0 14px 34px rgba(28, 36, 32, 0.16);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink-900);
+  background: var(--cream-100);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0; }
+
+.page {
+  max-width: 460px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--cream-50);
+  box-shadow: 0 0 60px rgba(0,0,0,0.08);
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+
+/* Hero */
+.card-hero {
+  background: linear-gradient(160deg, var(--green-900), var(--green-700));
+  padding: max(28px, env(safe-area-inset-top)) 24px 64px;
+  text-align: center;
+  position: relative;
+}
+
+.card-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 40px;
+  background: var(--cream-50);
+  border-radius: 40px 40px 0 0;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-logo {
+  height: 84px;
+  width: auto;
+}
+
+.avatar {
+  width: 108px;
+  height: 108px;
+  flex: none;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--gold-500), var(--gold-600));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--green-900);
+  border: 4px solid rgba(255,255,255,0.85);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 2;
+}
+
+/* Identity */
+.identity {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 18px 28px 8px;
+}
+
+.identity h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--green-900);
+  margin: 0 0 6px;
+}
+
+.identity .company {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold-600);
+  text-transform: uppercase;
+}
+
+/* Actions */
+.actions {
+  padding: 22px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15.5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  min-height: 52px;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+.btn-primary {
+  background: var(--gold-500);
+  color: var(--green-900);
+  box-shadow: var(--shadow-md);
+  font-size: 16.5px;
+}
+.btn-primary:hover { background: var(--gold-600); }
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--green-900);
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.btn-whatsapp { color: #0d3a1c; }
+.btn-whatsapp svg { color: #25D366; }
+
+.actions-note {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--ink-500);
+  margin-top: 2px;
+}
+
+/* Section blocks */
+.section {
+  padding: 28px 24px 0;
+}
+
+.section-tag {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+  margin-bottom: 10px;
+}
+
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.info-row > div {
+  min-width: 0;
+}
+.info-row + .info-row {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.info-icon {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--cream-100);
+  color: var(--green-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-icon svg { width: 16px; height: 16px; }
+
+.info-row .lbl {
+  display: block;
+  font-size: 12px;
+  color: var(--ink-500);
+  margin-bottom: 2px;
+}
+.info-row .val {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-900);
+  overflow-wrap: anywhere;
+}
+.info-row .val.val-tight {
+  font-size: clamp(11px, 3.6vw, 15px);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.map-frame {
+  margin-top: 14px;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+}
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-800);
+}
+.directions-link svg { width: 16px; height: 16px; }
+
+/* Site link footer */
+.site-link {
+  margin: 28px 24px 0;
+  text-align: center;
+}
+.site-link a {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-800);
+  border-bottom: 2px solid var(--gold-500);
+  padding-bottom: 2px;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-500);
+  padding: 26px 24px 0;
+}
